@@ -1,0 +1,19 @@
+{
+  "name": "Basic Node.js",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "appPort": [
+    "3000:3000"
+  ],
+  "remoteUser": "node",
+  "postCreateCommand": "pnpm add -g npm-check-updates",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
