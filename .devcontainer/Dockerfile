@@ -1,7 +1,7 @@
 FROM debian:trixie
 
 RUN apt-get update -y && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install git wget
+    && apt-get -y install git wget nano
 
 RUN useradd -m -s /bin/bash node
 
@@ -14,6 +14,7 @@ ENV ENV="$HOME/.profile"
 ENV SHELL="/bin/bash"
 ENV PNPM_HOME="/home/node/.local/share/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
+ENV EDITOR="nano"
 
 RUN wget -qO- https://get.pnpm.io/install.sh | bash -
 
