@@ -1,5 +1,5 @@
-export const greet = (name: string): string => {
-  return `Hello, ${name}!`;
-};
+import { greet } from '@/greet.js';
 
-console.log(greet('World'));
+const greeting = greet('you');
+
+console.log(greeting);

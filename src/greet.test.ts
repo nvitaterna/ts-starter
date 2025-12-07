@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { faker } from '@faker-js/faker';
-import { greet } from './index.js';
+import { greet } from '@/greet.js';
 
 describe('greet function', () => {
   it('should return a greeting message', () => {

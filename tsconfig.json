@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "esnext",
     "lib": [
       "ESNext"
@@ -9,6 +10,11 @@
     "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "strict": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   }
 }
