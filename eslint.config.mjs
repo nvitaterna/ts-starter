@@ -2,14 +2,15 @@
 
 import eslint from '@eslint/js';
 import { defineConfig } from 'eslint/config';
-import tseslint from 'typescript-eslint';
+import { configs as tseslintConfigs } from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
-// import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 export default defineConfig(
+  eslintPluginUnicorn.configs.recommended,
   eslint.configs.recommended,
-  tseslint.configs.recommended,
+  tseslintConfigs.recommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   {
